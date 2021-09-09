@@ -8,7 +8,7 @@
  * Version: 1.0
  */
 
-if ( class_exists( 'AffiliateWP_Affiliate_QR_Codes' ) ) {
+if ( class_exists( 'AffiliateWP_Affiliate_QR_Codes' ) && ! shortcode_exists( 'affiliate_qr_code' ) ) {
 
 	add_shortcode( 'affiliate_qr_code', 'affwp_render_affiliate_qr_code' );
 
