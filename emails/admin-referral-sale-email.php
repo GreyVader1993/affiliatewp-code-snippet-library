@@ -71,4 +71,6 @@ function affwp_custom_referral_sale_email( $add ) {
 	$emails->send( $email, $subject, $message );
 
 }
-add_action( 'affwp_insert_referral', 'affwp_custom_referral_sale_email' );
+
+// Send email when referral is complete (status = paid)
+add_action( 'affwp_complete_referral', 'affwp_custom_referral_sale_email' );
